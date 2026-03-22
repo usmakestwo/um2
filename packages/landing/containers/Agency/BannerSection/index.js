@@ -21,7 +21,7 @@ const BannerSection = ({
       <Button
         title="Book a 30-Minute Consultation"
         as="a"
-        href="mailto:hello@usmakestwo.io?subject=Consultation Request"
+        href="https://calendly.com/small-maze7244/30min?month=2026-03"
         {...btnStyle}
       />
       <Button
