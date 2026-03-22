@@ -130,6 +130,13 @@ const data = {
         "Wherever possible, your data, prompts, and workflows live in your repo and infrastructure — not locked inside another SaaS subscription.",
     },
   ],
+  social_profile: [
+    {
+      id: 1,
+      icon: 'flaticon-github-logo',
+      link: '#',
+    },
+  ],
   testimonial: [
     {
       id: 1,
