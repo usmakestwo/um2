@@ -1,180 +1,141 @@
-import BlogImage1 from '../../assets/image/agency/blog/blog-img1.png';
-import BlogImage2 from '../../assets/image/agency/blog/blog-img2.png';
-import BlogImage3 from '../../assets/image/agency/blog/blog-img3.png';
-import Member1 from '../../assets/image/agency/team/member-1.jpg';
 import Denny from '../../assets/image/agency/client/denny.png';
 
 const data = {
   menuItems: [
     {
-      label: 'Feature',
-      path: '#featureSection',
+      label: 'What I Do',
+      path: '#whatIDoSection',
       offset: '80',
     },
     {
-      label: 'Work History',
-      path: '#workHistorySection',
-      offset: '67',
+      label: 'Services',
+      path: '#servicesSection',
+      offset: '80',
     },
     {
-      label: 'Testimonial',
-      path: '#testimonialSection',
-      offset: '100',
-    }
+      label: 'Use Cases',
+      path: '#useCasesSection',
+      offset: '80',
+    },
+    {
+      label: 'Why Me',
+      path: '#whySection',
+      offset: '80',
+    },
+    {
+      label: 'Contact',
+      path: '#contactSection',
+      offset: '80',
+    },
   ],
-  aboutus: [
-    {
-      id: 1,
-      title: 'Data Journey',
-      icon: 'flaticon-next',
-    },
-    {
-      id: 2,
-      title: 'Big Data',
-      icon: 'flaticon-next',
-    },
-    {
-      id: 3,
-      title: 'Data Engineering',
-      icon: 'flaticon-next',
-    },
-    {
-      id: 4,
-      title: 'Data Science',
-      icon: 'flaticon-next',
-    },
-    {
-      id: 5,
-      title: 'Data Visualization',
-      icon: 'flaticon-next',
-    }
-  ],
-  features: [
+  whatIDo: [
     {
       id: 1,
       icon: 'flaticon-ruler',
-      title: 'Analytics First Approach',
+      title: 'Diagnose your processes and tech stack',
       description:
-        'We help you migrate your organization into a data driven decision engine.',
+        'Like a mini consulting engagement — I map your current workflows, identify friction points, and surface where automation will have the highest ROI.',
     },
     {
       id: 2,
       icon: 'flaticon-flask',
-      title: 'Search Optimization',
+      title: 'Design an OpenClaw strategy',
       description:
-        'By using Search Engine Optimization, You will get more Clients',
+        "Decide where agents fit, what they're allowed to do, how they're governed — ownership, consolidation, and economics baked in from day one.",
     },
     {
       id: 3,
       icon: 'flaticon-pencil-case',
-      title: 'Software Development',
+      title: 'Implement OpenClaw agents',
       description:
-        'We offer full-cycle development services using the latest open source technologies.',
-    },
-    {
-      id: 4,
-      icon: 'flaticon-ruler',
-      title: 'System Design',
-      description:
-        'We help guide you into designing systems that are scalable and sustainable.',
-    },
-    {
-      id: 5,
-      icon: 'flaticon-ruler',
-      title: 'Data Pipeline',
-      description:
-        'We help guide you into designing systems that are scalable and sustainable.',
-    },
-    {
-      id: 6,
-      icon: 'flaticon-ruler',
-      title: 'Personalization and Targeting',
-      description:
-        'We help guide you into designing systems that are scalable and sustainable.',
-    }
-  ],
-  qualityFeature: [
-    {
-      id: 1,
-      icon: 'flaticon-flask',
-      title: 'Search Optimization',
-      description:
-        'By using Search Engine Optimization, You will get more Clients.',
-    },
-    {
-      id: 2,
-      icon: 'flaticon-pencil-case',
-      title: 'Wireframing Task',
-      description:
-        'We respect our customer opinions and deals with them with perfect wireframing.',
-    },
-    {
-      id: 3,
-      icon: 'flaticon-ruler',
-      title: 'Ui/Ux Design',
-      description:
-        'We provide the best UI/UX Design by following the latest trends of the market .',
+        'End-to-end setup: runtime, skills, integrations (CRM, Slack, email, helpdesk), and guardrails so agents run safely 24/7.',
     },
     {
       id: 4,
       icon: 'flaticon-briefing',
-      title: 'Content Writting',
+      title: 'Iterate with real data',
       description:
-        'Proper Content Management is important to find out the real clients for your agencies .',
+        "Measure impact, refine workflows, and hand over clear documentation — so your team owns and understands what's running in production.",
     },
   ],
-  blog: [
+  services: [
     {
       id: 1,
-      title: 'Real home corporation',
-      thumbnail_url: BlogImage1,
-      date: 'November 02, 2018',
-      postLink: '#1',
+      tag: 'STRATEGY',
+      title: 'OpenClaw Readiness & Strategy Workshop',
+      duration: '1–2 week engagement',
+      description:
+        'Map key workflows, identify automation opportunities, and decide exactly where OpenClaw fits your business.',
+      deliverable:
+        'A clear roadmap with 3–5 high-ROI agent use cases and a recommended architecture (data, channels, tools).',
     },
     {
       id: 2,
-      title: 'Sheltech developer ltd.',
-      thumbnail_url: BlogImage2,
-      date: 'November 12, 2018',
-      postLink: '#2',
+      tag: 'IMPLEMENTATION',
+      title: 'End-to-End OpenClaw Implementation',
+      duration: 'Project-based',
+      description:
+        'Technical setup of the OpenClaw runtime, skills, and connections to your CRM, helpdesk, Slack, email, and more.',
+      deliverable:
+        'One or more production agents — lead capture, support triage, internal ops — with testing, guardrails, handover, and team training.',
     },
     {
       id: 3,
-      title: 'Alt architecture co.',
-      thumbnail_url: BlogImage3,
-      date: 'December 09, 2018',
-      postLink: '#3',
+      tag: 'ONGOING',
+      title: 'Ongoing Optimization & Co-Piloting',
+      duration: 'Monthly retainer',
+      description:
+        'Monthly refinement of prompts, workflows, and metrics as your business evolves. Optionally operate as your fractional head of AI automation.',
+      deliverable:
+        'OpenClaw agents that stay aligned with business goals — not just running, but improving month over month.',
     },
   ],
-  teamMember: [
+  useCases: [
     {
       id: 1,
-      name: 'Gonzalo Vazquez',
-      thumbnail_url: Member1,
-      designation: 'Founder',
-      social_links: [
-        {
-          id: 1,
-          icon: 'flaticon-facebook-logo',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-twitter-logo-silhouette',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-instagram',
-          url: '#',
-        },
-        {
-          id: 1,
-          icon: 'flaticon-dribble-logo',
-          url: '#',
-        },
-      ],
-    }
+      title: '24/7 Lead Capture & Qualification',
+      description:
+        'Agents watch your web, WhatsApp, and email channels — capture leads, score them, push to CRM, and trigger personalised follow-ups without a human in the loop.',
+    },
+    {
+      id: 2,
+      title: 'First-Line Customer Support',
+      description:
+        'Answers common questions, creates tickets, and escalates complex issues with full conversation context — so your support team only touches the hard stuff.',
+    },
+    {
+      id: 3,
+      title: 'Internal Ops Assistant',
+      description:
+        'Watches Slack channels, spots anomalies, suggests fixes, and routes issues to the right person — keeping your team in flow instead of firefighting.',
+    },
+  ],
+  whyUs: [
+    {
+      id: 1,
+      title: 'Boutique, not agency factory',
+      description:
+        'You work directly with me — not a rotating bench of juniors. Every engagement gets my full attention from strategy through deployment.',
+    },
+    {
+      id: 2,
+      title: 'Strategy first, then automation',
+      description:
+        'I start from business value and process design, then choose tools and models. Automation without strategy is just expensive noise.',
+    },
+    {
+      id: 3,
+      title: 'Open, ownable stack',
+      description:
+        "Wherever possible, your data, prompts, and workflows live in your repo and infrastructure — not locked inside another SaaS subscription.",
+    },
+  ],
+  social_profile: [
+    {
+      id: 1,
+      icon: 'flaticon-github-logo',
+      link: '#',
+    },
   ],
   testimonial: [
     {
@@ -184,162 +145,7 @@ const data = {
       comment:
         'Gonzalo is a brilliant technologist and a wonderful human being. While we only worked together for a year, he had already made an enormous impact to our Big Data and Analytics reference architecture, pushing our A/B testing and event handling abilities to the bleeding edge. Additionally, he drove serious cultural improvements, with his humble, mission-driven, egoless approach to work.',
       avatar_url: Denny,
-    }
-  ],
-  faq: [
-    {
-      id: 1,
-      expend: true,
-      title: 'How to contact with Customer Service?',
-      description:
-        'Our Customer Experience Team is available 7 days a week and we offer 2 ways to get in contact.Email and Chat . We try to reply quickly, so you need not to wait too long for a response!. ',
     },
-    {
-      id: 2,
-      title: 'App installation failed, how to update system information?',
-      description:
-        'Please read the documentation carefully . We also have some online  video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum . ',
-    },
-    {
-      id: 3,
-      title: 'Website reponse taking time, how to improve?',
-      description:
-        'At first, Please check your internet connection . We also have some online  video tutorials regarding this issue . If the problem remains, Please Open a ticket in the support forum .',
-    },
-    {
-      id: 4,
-      title: 'New update fixed all bug and issues?',
-      description:
-        'We are giving the update of this theme continuously . You will receive an email Notification when we push an update. Always try to be updated with us .',
-    },
-  ],
-  menuWidget: [
-    {
-      id: 1,
-      title: 'About Us',
-      menuItems: [
-        {
-          id: 1,
-          url: '#1',
-          text: 'Support Center',
-        },
-        {
-          id: 2,
-          url: '#2',
-          text: 'Customer Support',
-        },
-        {
-          id: 3,
-          url: '#3',
-          text: 'About Us',
-        },
-        {
-          id: 4,
-          url: '#4',
-          text: 'Copyright',
-        },
-        {
-          id: 5,
-          url: '#5',
-          text: 'Popular Campaign',
-        },
-      ],
-    },
-    {
-      id: 2,
-      title: 'Our Information',
-      menuItems: [
-        {
-          id: 1,
-          url: '#1',
-          text: 'Return Policy',
-        },
-        {
-          id: 2,
-          url: '#2',
-          text: 'Privacy Policy',
-        },
-        {
-          id: 3,
-          url: '#2',
-          text: 'Terms & Conditions',
-        },
-        {
-          id: 4,
-          url: '#4',
-          text: 'Site Map',
-        },
-        {
-          id: 5,
-          url: '#5',
-          text: 'Store Hours',
-        },
-      ],
-    },
-    {
-      id: 3,
-      title: 'My Account',
-      menuItems: [
-        {
-          id: 1,
-          url: '#1',
-          text: 'Press inquiries',
-        },
-        {
-          id: 2,
-          url: '#2',
-          text: 'Social media directories',
-        },
-        {
-          id: 3,
-          url: '#3',
-          text: 'Images & B-roll',
-        },
-        {
-          id: 4,
-          url: '#4',
-          text: 'Permissions',
-        },
-        {
-          id: 5,
-          url: '#5',
-          text: 'Speaker requests',
-        },
-      ],
-    },
-    {
-      id: 4,
-      title: 'Policy',
-      menuItems: [
-        {
-          id: 1,
-          url: '#1',
-          text: 'Application security',
-        },
-        {
-          id: 2,
-          url: '#2',
-          text: 'Software principles',
-        },
-        {
-          id: 3,
-          url: '#3',
-          text: 'Unwanted software policy',
-        },
-        {
-          id: 4,
-          url: '#4',
-          text: 'Responsible supply chain',
-        },
-      ],
-    },
-  ],
-  social_profile: [
-    {
-      id: 1,
-      icon: 'flaticon-github-logo',
-      link: '#1',
-    }
   ],
 };
 export default data;

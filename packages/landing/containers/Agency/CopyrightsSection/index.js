@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 import Text from 'reusecore/src/elements/Text';
 import CopyrightWrapper from './copyrightSection.style';
 import data from 'common/src/data/Agency/';
@@ -10,15 +9,13 @@ const CopyrightSection = () => {
       <ul>
         {data.social_profile.map((profile, index) => (
           <li key={`profile_key_${index}`}>
-            <Link href="#1">
-              <a>
-                <i className={profile.icon} />
-              </a>
-            </Link>
+            <a href={profile.link} target="_blank" rel="noopener noreferrer">
+              <i className={profile.icon} />
+            </a>
           </li>
         ))}
       </ul>
-      <Text content="Copyrights 2019 @UsMakesTwo" />
+      <Text content="© 2026 UsMakesTwo" />
     </CopyrightWrapper>
   );
 };

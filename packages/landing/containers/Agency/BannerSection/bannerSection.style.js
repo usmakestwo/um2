@@ -1,70 +1,61 @@
 import styled from 'styled-components';
-import { themeGet } from 'styled-system';
-import BannerBG from 'common/src/assets/image/agency/agency-banner.png';
 
 const BannerWrapper = styled.section`
-  padding-top: 210px;
-  padding-bottom: 160px;
-  background-image: url(${BannerBG});
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #0b0b0b;
+  padding-top: 120px;
+  padding-bottom: 100px;
   overflow: hidden;
-  @media only screen and (min-width: 1367px) {
-    min-height: 100vh;
-  }
-  @media (max-width: 990px) {
-    padding-top: 150px;
-    padding-bottom: 100px;
-  }
-  @media only screen and (max-width: 480px) {
-    background: none;
-    padding-top: 130px;
-    padding-bottom: 60px;
-  }
-  .particle {
+  position: relative;
+
+  /* Subtle grid texture */
+  &::before {
+    content: '';
     position: absolute;
-    width: 50%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    @media (max-width: 990px) {
-      display: none;
-    }
-    @media only screen and (max-width: 480px) {
-      width: 100%;
-    }
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+    background-size: 60px 60px;
+    pointer-events: none;
   }
+
+  /* Radial glow behind headline */
+  &::after {
+    content: '';
+    position: absolute;
+    top: 20%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(16,172,132,0.08) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
   .row {
     position: relative;
     z-index: 1;
   }
+
   .button__wrapper {
-    margin-top: 40px;
-    .reusecore__button {
-      &:first-child {
-        transition: all 0.3s ease;
-        &:hover {
-          box-shadow: 0px 9px 20px -5px rgba(16, 172, 132, 0.57);
-        }
-      }
-    }
+    margin-top: 44px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    align-items: center;
+  }
+
+  @media (max-width: 990px) {
+    padding-top: 130px;
+    padding-bottom: 80px;
+    min-height: auto;
+  }
+  @media (max-width: 480px) {
+    padding-top: 110px;
+    padding-bottom: 60px;
   }
 `;
-
-const DiscountLabel = styled.div`
-  display: inline-block;
-  border-radius: 4em;
-  padding: 7px 25px;
-  box-shadow: 0px 4px 50px 0px rgba(22, 53, 76, 0.08);
-  margin-bottom: 30px;
-  background-color: ${themeGet('colors.white', '#ffffff')};
-  @media (max-width: 767px) {
-    padding: 7px 10px;
-  }
-`;
-
-export { DiscountLabel };
 
 export default BannerWrapper;

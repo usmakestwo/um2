@@ -14,6 +14,7 @@ const FeatureSection = ({
   sectionHeader,
   sectionTitle,
   sectionSubTitle,
+  sectionIntro,
   featureTitle,
   featureDescription,
   iconStyle,
@@ -21,17 +22,18 @@ const FeatureSection = ({
   blockWrapperStyle,
 }) => {
   return (
-    <FeatureSectionWrapper id="featureSection">
+    <FeatureSectionWrapper id="whatIDoSection">
       <Container>
         <Box {...sectionHeader}>
-          <Text content="OUR SERVICES" {...sectionSubTitle} />
-          <Heading
-            content="Services that We Provide"
-            {...sectionTitle}
+          <Text content="MBA + ENGINEER" {...sectionSubTitle} />
+          <Heading content="What I Do" {...sectionTitle} />
+          <Text
+            content="I'm a boutique AI automation partner who combines business process thinking with hands-on OpenClaw implementation. I map your workflows, design an OpenClaw strategy around ownership, consolidation, and economics, then build and deploy agents that actually run your operations 24/7."
+            {...sectionIntro}
           />
         </Box>
         <Box className="row" {...row}>
-          {data.features.map((feature, index) => (
+          {data.whatIDo.map((feature, index) => (
             <Box className="col" {...col} key={`feature-${index}`}>
               <FeatureBlock
                 icon={<i className={feature.icon} />}
@@ -51,24 +53,21 @@ const FeatureSection = ({
   );
 };
 
-// FeatureSection style props
 FeatureSection.propTypes = {
   sectionHeader: PropTypes.object,
   row: PropTypes.object,
   col: PropTypes.object,
   sectionTitle: PropTypes.object,
   sectionSubTitle: PropTypes.object,
+  sectionIntro: PropTypes.object,
   featureTitle: PropTypes.object,
   featureDescription: PropTypes.object,
 };
 
-// FeatureSection default style
 FeatureSection.defaultProps = {
-  // section header default style
   sectionHeader: {
     mb: ['40px', '56px'],
   },
-  // sub section default style
   sectionSubTitle: {
     as: 'span',
     display: 'block',
@@ -79,63 +78,64 @@ FeatureSection.defaultProps = {
     color: '#10ac84',
     mb: '10px',
   },
-  // section title default style
   sectionTitle: {
     textAlign: 'center',
-    fontSize: ['20px', '24px'],
-    fontWeight: '400',
-    color: '#0f2137',
+    fontSize: ['26px', '36px'],
+    fontWeight: '600',
+    color: '#f0f0f0',
     letterSpacing: '-0.025em',
+    mb: '20px',
+  },
+  sectionIntro: {
+    textAlign: 'center',
+    fontSize: '17px',
+    color: 'rgba(240,240,240,0.52)',
+    lineHeight: '1.85',
+    maxWidth: '680px',
+    mx: 'auto',
     mb: '0',
   },
-  // feature row default style
   row: {
     flexBox: true,
     flexWrap: 'wrap',
   },
-  // feature col default style
   col: {
-    width: [1, 1 / 2, 1 / 2, 1 / 3],
+    width: [1, 1 / 2, 1 / 2, 1 / 2],
     borderLeft: '1px solid #f1f4f6',
     borderBottom: '1px solid #f1f4f6',
   },
-  // feature block wrapper default style
   blockWrapperStyle: {
     p: ['30px', '20px', '30px', '40px'],
   },
-  // feature icon default style
   iconStyle: {
-    width: '84px',
-    height: '84px',
-    m: '0 auto',
-    borderRadius: '50%',
-    bg: '#93d26e',
+    width: '44px',
+    height: '44px',
+    borderRadius: '10px',
+    bg: 'rgba(16,172,132,0.10)',
+    border: '1px solid rgba(16,172,132,0.20)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    fontSize: '36px',
-    color: '#ffffff',
+    fontSize: '20px',
+    color: '#10ac84',
     overflow: 'hidden',
-    mb: '30px',
+    mb: '20px',
   },
-  // feature content default style
   contentStyle: {
-    textAlign: 'center',
+    textAlign: 'left',
   },
-  // feature title default style
   featureTitle: {
-    fontSize: ['18px', '20px'],
-    fontWeight: '400',
-    color: '#0f2137',
+    fontSize: ['16px', '18px'],
+    fontWeight: '500',
+    color: '#f0f0f0',
     lineHeight: '1.5',
-    mb: ['10px', '10px', '10px', '20px'],
-    letterSpacing: '-0.020em',
+    mb: '10px',
+    letterSpacing: '-0.01em',
   },
-  // feature description default style
   featureDescription: {
-    fontSize: '15px',
-    lineHeight: '1.75',
-    color: '#343d48cc',
+    fontSize: '14px',
+    lineHeight: '1.8',
+    color: 'rgba(240,240,240,0.50)',
   },
 };
 

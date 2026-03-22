@@ -12,7 +12,7 @@ import SearchPanel from '../SearchPanel';
 import LoginModal from '../LoginModal';
 import CopyrightSection from '../CopyrightsSection';
 
-import LogoImage from 'common/src/assets/image/agency/um2long.png';
+import LogoImage from 'common/src/assets/image/agency/logo-horizontal.svg';
 
 import { DrawerContext } from 'common/src/contexts/DrawerContext';
 
@@ -137,8 +137,9 @@ Navbar.defaultProps = {
   },
   // Default logo size
   logoStyle: {
-    width: '200px',
-    height: 'auto',
+    width: '220px',
+    height: '42px',
+    objectFit: 'contain',
   },
 };
 
