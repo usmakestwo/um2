@@ -1,0 +1,6 @@
+[build]
+  command   = "yarn && yarn netlify-deploy"
+  publish   = "packages/landing/out"
+
+[build.environment]
+  NODE_VERSION = "18"
