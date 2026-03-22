@@ -3,14 +3,14 @@
 	"version": "3.2.0",
 	"main": "index.js",
 	"scripts": {
-		"dev": "next",
-		"build": "next build",
+		"dev": "NODE_OPTIONS=--openssl-legacy-provider next",
+		"build": "NODE_OPTIONS=--openssl-legacy-provider next build",
 		"start": "next start",
-		"export": "next build && next export",
-		"docz:dev": "docz dev",
-		"docz:build": "docz build",
-		"now-build": "next build && next export -o dist",
-		"netlify-build": "next build && next export"
+		"export": "NODE_OPTIONS=--openssl-legacy-provider next build && next export",
+		"docz:dev": "NODE_OPTIONS=--openssl-legacy-provider docz dev",
+		"docz:build": "NODE_OPTIONS=--openssl-legacy-provider docz build",
+		"now-build": "NODE_OPTIONS=--openssl-legacy-provider next build && next export -o dist",
+		"netlify-build": "NODE_OPTIONS=--openssl-legacy-provider next build && next export"
 	},
 	"dependencies": {
 		"@glidejs/glide": "^3.3.0",
