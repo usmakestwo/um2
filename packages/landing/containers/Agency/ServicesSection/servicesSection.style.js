@@ -1,54 +1,53 @@
 import styled from 'styled-components';
 
 const ServicesSectionWrapper = styled.section`
-  padding: 80px 0;
-  background-color: #f9fafb;
+  padding: 100px 0;
+  background-color: #0b0b0b;
   overflow: hidden;
-  @media (max-width: 990px) {
-    padding: 60px 0;
-  }
-  @media (max-width: 767px) {
-    padding: 40px 0;
-  }
+
+  @media (max-width: 990px) { padding: 72px 0; }
+  @media (max-width: 767px) { padding: 56px 0; }
 `;
 
 export const ServiceCard = styled.div`
-  background: #ffffff;
-  border-radius: 8px;
-  padding: 40px 36px;
+  background: #111111;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 12px;
+  padding: 36px 32px;
   height: 100%;
-  box-shadow: 0px 4px 20px 0px rgba(16, 66, 97, 0.07);
-  transition: box-shadow 0.3s ease;
+  transition: border-color 0.25s ease, background 0.25s ease;
   &:hover {
-    box-shadow: 0px 12px 40px 0px rgba(16, 66, 97, 0.15);
+    border-color: rgba(16,172,132,0.30);
+    background: #141414;
   }
 `;
 
 export const ServiceTag = styled.span`
   display: inline-block;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.15em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
   color: #10ac84;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
 `;
 
 export const ServiceDuration = styled.p`
   font-size: 13px;
-  color: #343d4880;
-  margin-bottom: 0;
-  margin-top: 8px;
+  color: rgba(240,240,240,0.35);
+  margin: 8px 0 0;
   font-style: italic;
+  font-weight: 400;
 `;
 
 export const DeliverableBox = styled.div`
-  margin-top: 20px;
-  padding: 16px 20px;
-  background: #f0faf6;
-  border-left: 3px solid #10ac84;
-  border-radius: 0 4px 4px 0;
+  margin-top: 24px;
+  padding: 16px 18px;
+  background: rgba(16,172,132,0.06);
+  border: 1px solid rgba(16,172,132,0.15);
+  border-radius: 8px;
   font-size: 14px;
-  color: #343d48cc;
+  color: rgba(240,240,240,0.55);
   line-height: 1.7;
 `;
 

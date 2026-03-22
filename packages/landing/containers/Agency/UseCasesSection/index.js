@@ -36,7 +36,7 @@ const UseCasesSection = ({
           <Box className="col" {...col}>
             {data.useCases.map((useCase, index) => (
               <UseCaseCard key={`usecase-${index}`}>
-                <UseCaseNumber>{index + 1}</UseCaseNumber>
+                <UseCaseNumber>{String(index + 1).padStart(2, '0')}</UseCaseNumber>
                 <UseCaseContent>
                   <Heading content={useCase.title} {...useCaseTitle} />
                   <Text content={useCase.description} {...useCaseDescription} />
@@ -63,32 +63,33 @@ UseCasesSection.propTypes = {
 
 UseCasesSection.defaultProps = {
   sectionHeader: {
-    mb: ['40px', '56px'],
+    mb: ['48px', '64px'],
   },
   sectionSubTitle: {
     as: 'span',
     display: 'block',
     textAlign: 'center',
-    fontSize: '14px',
-    letterSpacing: '0.15em',
-    fontWeight: '700',
+    fontSize: '12px',
+    letterSpacing: '0.14em',
+    fontWeight: '600',
     color: '#10ac84',
-    mb: '10px',
+    mb: '12px',
+    textTransform: 'uppercase',
   },
   sectionTitle: {
     textAlign: 'center',
-    fontSize: ['24px', '32px'],
-    fontWeight: '300',
-    color: '#0f2137',
+    fontSize: ['26px', '36px'],
+    fontWeight: '600',
+    color: '#f0f0f0',
     letterSpacing: '-0.025em',
     mb: '20px',
   },
   sectionIntro: {
     textAlign: 'center',
-    fontSize: '17px',
-    color: '#343d48cc',
+    fontSize: '16px',
+    color: 'rgba(240,240,240,0.50)',
     lineHeight: '1.85',
-    maxWidth: '680px',
+    maxWidth: '640px',
     mx: 'auto',
     mb: '0',
   },
@@ -101,21 +102,21 @@ UseCasesSection.defaultProps = {
   col: {
     pr: '15px',
     pl: '15px',
-    width: [1, 1, '70%'],
+    width: [1, 1, '64%'],
     mx: 'auto',
   },
   useCaseTitle: {
-    fontSize: ['18px', '20px'],
+    fontSize: ['17px', '19px'],
     fontWeight: '500',
-    color: '#0f2137',
+    color: '#f0f0f0',
     lineHeight: '1.4',
-    mb: '10px',
-    letterSpacing: '-0.020em',
+    mb: '8px',
+    letterSpacing: '-0.01em',
   },
   useCaseDescription: {
-    fontSize: '16px',
+    fontSize: '15px',
     lineHeight: '1.8',
-    color: '#343d48cc',
+    color: 'rgba(240,240,240,0.50)',
     mb: '0',
   },
 };

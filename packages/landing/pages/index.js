@@ -26,8 +26,10 @@ export default () => {
             name="Description"
             content="Boutique AI automation partner helping founders and operators design and implement end-to-end OpenClaw strategies that turn autonomous AI agents into real business results."
           />
+          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
             rel="stylesheet"
           />
         </Head>

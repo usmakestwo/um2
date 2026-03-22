@@ -37,8 +37,8 @@ const ServicesSection = ({
                 <ServiceDuration>{service.duration}</ServiceDuration>
                 <Text content={service.description} {...serviceDescription} />
                 <DeliverableBox>
-                  <strong style={{ color: '#10ac84', fontSize: '12px', letterSpacing: '0.08em', fontWeight: '700' }}>
-                    DELIVERABLE
+                  <strong style={{ color: '#10ac84', fontSize: '11px', letterSpacing: '0.10em', fontWeight: '600', textTransform: 'uppercase' }}>
+                    Deliverable
                   </strong>
                   <br />
                   {service.deliverable}
@@ -64,52 +64,53 @@ ServicesSection.propTypes = {
 
 ServicesSection.defaultProps = {
   sectionHeader: {
-    mb: ['40px', '56px'],
+    mb: ['48px', '64px'],
   },
   sectionSubTitle: {
     as: 'span',
     display: 'block',
     textAlign: 'center',
-    fontSize: '14px',
-    letterSpacing: '0.15em',
-    fontWeight: '700',
+    fontSize: '12px',
+    letterSpacing: '0.14em',
+    fontWeight: '600',
     color: '#10ac84',
-    mb: '10px',
+    mb: '12px',
+    textTransform: 'uppercase',
   },
   sectionTitle: {
     textAlign: 'center',
-    fontSize: ['24px', '32px'],
-    fontWeight: '300',
-    color: '#0f2137',
+    fontSize: ['26px', '36px'],
+    fontWeight: '600',
+    color: '#f0f0f0',
     letterSpacing: '-0.025em',
     mb: '0',
   },
   row: {
     flexBox: true,
     flexWrap: 'wrap',
-    ml: '-15px',
-    mr: '-15px',
+    ml: '-12px',
+    mr: '-12px',
     alignItems: 'stretch',
   },
   col: {
-    pr: '15px',
-    pl: '15px',
-    mb: '30px',
+    pr: '12px',
+    pl: '12px',
+    mb: '24px',
     width: [1, 1, 1 / 3],
   },
   serviceTitle: {
-    fontSize: ['18px', '20px'],
+    fontSize: ['17px', '19px'],
     fontWeight: '500',
-    color: '#0f2137',
+    color: '#f0f0f0',
     lineHeight: '1.4',
     mb: '0',
-    letterSpacing: '-0.020em',
+    letterSpacing: '-0.01em',
   },
   serviceDescription: {
-    fontSize: '15px',
+    fontSize: '14px',
     lineHeight: '1.8',
-    color: '#343d48cc',
-    mt: '16px',
+    color: 'rgba(240,240,240,0.50)',
+    mt: '14px',
     mb: '0',
   },
 };

@@ -3,43 +3,33 @@ import PropTypes from 'prop-types';
 import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
-import Button from 'reusecore/src/elements/Button';
 import Container from 'common/src/components/UI/Container';
-import Particles from '../../Agency/Particle';
 import BannerWrapper from './bannerSection.style';
 
-const BannerSection = ({
-  row,
-  col,
-  title,
-  btnStyle,
-  description,
-  outlineBtnStyle,
-}) => {
-  const ButtonGroup = () => (
-    <Fragment>
-      <Button
-        title="Book a 30-Minute Consultation"
-        as="a"
-        href="https://calendly.com/small-maze7244/30min?month=2026-03"
-        {...btnStyle}
-      />
-      <Button
-        title="Email Me Directly"
-        as="a"
-        href="mailto:hello@usmakestwo.com"
-        variant="outlined"
-        {...outlineBtnStyle}
-      />
-    </Fragment>
-  );
-
+const BannerSection = ({ row, col, title, description, btnPrimary, btnSecondary }) => {
   return (
     <BannerWrapper>
-      <Particles />
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col}>
+            {/* Eyebrow badge */}
+            <div style={{
+              display: 'inline-flex',
+              alignItems: 'center',
+              gap: '8px',
+              padding: '6px 14px',
+              border: '1px solid rgba(16,172,132,0.35)',
+              borderRadius: '100px',
+              marginBottom: '32px',
+              fontSize: '13px',
+              color: '#10ac84',
+              letterSpacing: '0.04em',
+              fontWeight: '500',
+            }}>
+              <span style={{ width: '6px', height: '6px', borderRadius: '50%', backgroundColor: '#10ac84', display: 'inline-block' }} />
+              OpenClaw AI Automation
+            </div>
+
             <Heading
               content="Boutique AI Automation for the OpenClaw Era"
               {...title}
@@ -49,7 +39,20 @@ const BannerSection = ({
               {...description}
             />
             <Box className="button__wrapper">
-              <ButtonGroup />
+              <a
+                href="https://calendly.com/small-maze7244/30min?month=2026-03"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={btnPrimary}
+              >
+                Book a 30-Minute Consultation
+              </a>
+              <a
+                href="mailto:hello@usmakestwo.com"
+                style={btnSecondary}
+              >
+                Email Me Directly
+              </a>
             </Box>
           </Box>
         </Box>
@@ -60,9 +63,9 @@ const BannerSection = ({
 
 BannerSection.propTypes = {
   title: PropTypes.object,
-  btnStyle: PropTypes.object,
   description: PropTypes.object,
-  outlineBtnStyle: PropTypes.object,
+  btnPrimary: PropTypes.object,
+  btnSecondary: PropTypes.object,
 };
 
 BannerSection.defaultProps = {
@@ -76,36 +79,54 @@ BannerSection.defaultProps = {
   col: {
     pr: '15px',
     pl: '15px',
-    width: ['100%', '80%', '70%', '60%'],
+    width: ['100%', '85%', '72%', '60%'],
   },
   title: {
-    fontSize: ['28px', '36px', '46px', '58px'],
-    fontWeight: '300',
-    color: '#0f2137',
-    letterSpacing: '-0.025em',
-    mb: ['20px', '25px'],
-    lineHeight: '1.25',
+    fontSize: ['36px', '48px', '58px', '68px'],
+    fontWeight: '600',
+    color: '#f0f0f0',
+    letterSpacing: '-0.03em',
+    mb: '24px',
+    lineHeight: '1.12',
+    as: 'h1',
   },
   description: {
     fontSize: ['16px', '18px'],
-    color: '#343d48cc',
-    lineHeight: '1.85',
+    color: 'rgba(240,240,240,0.58)',
+    lineHeight: '1.8',
     mb: '0',
-    maxWidth: '600px',
+    maxWidth: '580px',
+    fontWeight: '400',
   },
-  btnStyle: {
-    minWidth: ['200px', '220px'],
+  btnPrimary: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    padding: '13px 28px',
+    backgroundColor: '#10ac84',
+    color: '#ffffff',
     fontSize: '15px',
     fontWeight: '500',
-    mr: '15px',
-    mb: ['15px', '0'],
+    borderRadius: '6px',
+    border: 'none',
+    cursor: 'pointer',
+    letterSpacing: '0.01em',
+    transition: 'background-color 0.2s ease, box-shadow 0.2s ease',
+    textDecoration: 'none',
   },
-  outlineBtnStyle: {
-    minWidth: ['160px', '180px'],
+  btnSecondary: {
+    display: 'inline-flex',
+    alignItems: 'center',
+    padding: '13px 28px',
+    backgroundColor: 'transparent',
+    color: 'rgba(240,240,240,0.70)',
     fontSize: '15px',
-    fontWeight: '500',
-    color: '#0f2137',
-    border: '2px solid #0f2137',
+    fontWeight: '400',
+    borderRadius: '6px',
+    border: '1px solid rgba(255,255,255,0.12)',
+    cursor: 'pointer',
+    letterSpacing: '0.01em',
+    transition: 'border-color 0.2s ease, color 0.2s ease',
+    textDecoration: 'none',
   },
 };
 

@@ -38,38 +38,19 @@ const ContactSection = ({
           <FormRow>
             <FormField>
               <label htmlFor="contact-name">Name</label>
-              <input
-                id="contact-name"
-                name="name"
-                type="text"
-                placeholder="Your name"
-                required
-              />
+              <input id="contact-name" name="name" type="text" placeholder="Your name" required />
             </FormField>
             <FormField>
               <label htmlFor="contact-company">Company</label>
-              <input
-                id="contact-company"
-                name="company"
-                type="text"
-                placeholder="Your company"
-              />
+              <input id="contact-company" name="company" type="text" placeholder="Your company" />
             </FormField>
           </FormRow>
           <FormField>
             <label htmlFor="contact-email">Email</label>
-            <input
-              id="contact-email"
-              name="email"
-              type="email"
-              placeholder="you@company.com"
-              required
-            />
+            <input id="contact-email" name="email" type="email" placeholder="you@company.com" required />
           </FormField>
           <FormField>
-            <label htmlFor="contact-message">
-              Tell me about your processes
-            </label>
+            <label htmlFor="contact-message">Tell me about your processes</label>
             <textarea
               id="contact-message"
               name="message"
@@ -90,8 +71,8 @@ const ContactSection = ({
                 <a href="tel:+14169102047">+1 416-910-2047</a>
               </span>
             }
-            fontSize="16px"
-            color="#343d48cc"
+            fontSize="14px"
+            color="rgba(240,240,240,0.40)"
             mb="0"
           />
         </DirectContact>
@@ -109,32 +90,33 @@ ContactSection.propTypes = {
 
 ContactSection.defaultProps = {
   sectionHeader: {
-    mb: ['40px', '56px'],
+    mb: ['48px', '64px'],
   },
   sectionSubTitle: {
     as: 'span',
     display: 'block',
     textAlign: 'center',
-    fontSize: '14px',
-    letterSpacing: '0.15em',
-    fontWeight: '700',
+    fontSize: '12px',
+    letterSpacing: '0.14em',
+    fontWeight: '600',
     color: '#10ac84',
-    mb: '10px',
+    mb: '12px',
+    textTransform: 'uppercase',
   },
   sectionTitle: {
     textAlign: 'center',
-    fontSize: ['24px', '32px'],
-    fontWeight: '300',
-    color: '#0f2137',
+    fontSize: ['26px', '36px'],
+    fontWeight: '600',
+    color: '#f0f0f0',
     letterSpacing: '-0.025em',
-    mb: '20px',
+    mb: '16px',
   },
   sectionIntro: {
     textAlign: 'center',
-    fontSize: '17px',
-    color: '#343d48cc',
-    lineHeight: '1.85',
-    maxWidth: '520px',
+    fontSize: '16px',
+    color: 'rgba(240,240,240,0.50)',
+    lineHeight: '1.8',
+    maxWidth: '480px',
     mx: 'auto',
     mb: '0',
   },

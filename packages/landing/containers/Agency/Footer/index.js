@@ -8,90 +8,80 @@ import FooterWrapper from './footer.style';
 
 import LogoImage from 'common/src/assets/image/agency/um2long.png';
 
-const Footer = ({
-  row,
-  colOne,
-  logoStyle,
-  textStyle,
-}) => {
+const Footer = ({ row, colOne, colTwo, logoStyle }) => {
   return (
     <FooterWrapper id="footerSection">
       <Container>
         <Box className="row" {...row}>
           <Box {...colOne}>
-            <Logo
-              href="#"
-              logoSrc={LogoImage}
-              title="Agency"
-              logoStyle={logoStyle}
+            <Logo href="#" logoSrc={LogoImage} title="UsMakesTwo" logoStyle={logoStyle} />
+            <Text
+              content="Boutique AI automation for founders and operators."
+              fontSize="13px"
+              color="rgba(240,240,240,0.35)"
+              mt="12px"
+              mb="0"
             />
-            <Text content="hello@usmakestwo.com" {...textStyle} />
-            <Text content="+1416-910-2047" {...textStyle} />
           </Box>
-          {/* End of footer logo column */}
+          <Box {...colTwo}>
+            <Text
+              content={
+                <span>
+                  <a href="mailto:hello@usmakestwo.com" style={{ color: 'rgba(240,240,240,0.45)', textDecoration: 'none', marginRight: '24px', fontSize: '13px' }}>
+                    hello@usmakestwo.com
+                  </a>
+                  <a href="tel:+14169102047" style={{ color: 'rgba(240,240,240,0.45)', textDecoration: 'none', fontSize: '13px' }}>
+                    +1 416-910-2047
+                  </a>
+                </span>
+              }
+              mb="0"
+            />
+            <Text
+              content="© 2026 UsMakesTwo. All rights reserved."
+              fontSize="13px"
+              color="rgba(240,240,240,0.25)"
+              mt="8px"
+              mb="0"
+            />
+          </Box>
         </Box>
       </Container>
     </FooterWrapper>
   );
 };
 
-// Footer style props
 Footer.propTypes = {
   row: PropTypes.object,
-  col: PropTypes.object,
   colOne: PropTypes.object,
   colTwo: PropTypes.object,
-  titleStyle: PropTypes.object,
-  textStyle: PropTypes.object,
   logoStyle: PropTypes.object,
 };
 
-// Footer default style
 Footer.defaultProps = {
-  // Footer row default style
   row: {
     flexBox: true,
     flexWrap: 'wrap',
-    ml: '-4px',
-    mr: '-4px',
+    ml: '-15px',
+    mr: '-15px',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
-  // Footer col one style
   colOne: {
-    width: ['100%', '30%', '35%', '23%'],
-    mt: [0, '13px'],
-    mb: ['30px', 0],
-    pl: ['15px', 0],
-    pr: ['15px', '15px', 0],
-  },
-  // Footer col two style
-  colTwo: {
-    width: ['100%', '70%', '65%', '77%'],
-    flexBox: true,
-    flexWrap: 'wrap',
-  },
-  // Footer col default style
-  col: {
-    width: ['100%', '50%', '50%', '25%'],
     pl: '15px',
     pr: '15px',
-    mb: '30px',
+    width: ['100%', '100%', 'auto'],
+    mb: ['24px', '24px', '0'],
   },
-  // widget title default style
-  titleStyle: {
-    color: '#343d48',
-    fontSize: '16px',
-    fontWeight: '700',
+  colTwo: {
+    pl: '15px',
+    pr: '15px',
+    width: ['100%', '100%', 'auto'],
+    textAlign: ['left', 'left', 'right'],
   },
-  // Default logo size
   logoStyle: {
-    width: '200px',
-    mb: '15px',
-  },
-  // widget text default style
-  textStyle: {
-    color: '#0f2137',
-    fontSize: '16px',
-    mb: '10px',
+    width: '160px',
+    mb: '0',
   },
 };
 
