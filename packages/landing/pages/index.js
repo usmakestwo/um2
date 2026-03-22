@@ -8,10 +8,10 @@ import { GlobalStyle, AgencyWrapper } from '../containers/Agency/agency.style';
 import Navbar from '../containers/Agency/Navbar';
 import BannerSection from '../containers/Agency/BannerSection';
 import FeatureSection from '../containers/Agency/FeatureSection';
-import AboutUsSection from '../containers/Agency/AboutUsSection';
-import WorkHistory from '../containers/Agency/WorkHistory';
-import TestimonialSection from '../containers/Agency/TestimonialSection';
-import NewsletterSection from '../containers/Agency/NewsletterSection';
+import ServicesSection from '../containers/Agency/ServicesSection';
+import UseCasesSection from '../containers/Agency/UseCasesSection';
+import WhySection from '../containers/Agency/WhySection';
+import ContactSection from '../containers/Agency/ContactSection';
 import Footer from '../containers/Agency/Footer';
 import { DrawerProvider } from 'common/src/contexts/DrawerContext';
 
@@ -19,12 +19,13 @@ export default () => {
   return (
     <ThemeProvider theme={agencyTheme}>
       <Fragment>
-        {/* Start agency head section */}
         <Head>
-          <title>UsMakesTwo | Analytics Solutions</title>
+          <title>UsMakesTwo | Boutique AI Automation for the OpenClaw Era</title>
           <meta name="theme-color" content="#10ac84" />
-          <meta name="Description" content="React next landing page" />
-          {/* Load google fonts */}
+          <meta
+            name="Description"
+            content="Boutique AI automation partner helping founders and operators design and implement end-to-end OpenClaw strategies that turn autonomous AI agents into real business results."
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i"
             rel="stylesheet"
@@ -32,8 +33,6 @@ export default () => {
         </Head>
         <ResetCSS />
         <GlobalStyle />
-        {/* End of agency head section */}
-        {/* Start agency wrapper section */}
         <AgencyWrapper>
           <Sticky top={0} innerZ={9999} activeClass="sticky-nav-active">
             <DrawerProvider>
@@ -42,13 +41,12 @@ export default () => {
           </Sticky>
           <BannerSection />
           <FeatureSection />
-          <AboutUsSection />
-          <WorkHistory />
-          <TestimonialSection />
-          <NewsletterSection />
+          <ServicesSection />
+          <UseCasesSection />
+          <WhySection />
+          <ContactSection />
           <Footer />
         </AgencyWrapper>
-        {/* End of agency wrapper section */}
       </Fragment>
     </ThemeProvider>
   );

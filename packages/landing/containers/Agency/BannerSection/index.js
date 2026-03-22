@@ -4,10 +4,9 @@ import Box from 'reusecore/src/elements/Box';
 import Text from 'reusecore/src/elements/Text';
 import Heading from 'reusecore/src/elements/Heading';
 import Button from 'reusecore/src/elements/Button';
-import FeatureBlock from 'common/src/components/FeatureBlock';
 import Container from 'common/src/components/UI/Container';
 import Particles from '../../Agency/Particle';
-import BannerWrapper, { DiscountLabel } from './bannerSection.style';
+import BannerWrapper from './bannerSection.style';
 
 const BannerSection = ({
   row,
@@ -15,39 +14,43 @@ const BannerSection = ({
   title,
   btnStyle,
   description,
-  discountText,
-  discountAmount,
   outlineBtnStyle,
 }) => {
   const ButtonGroup = () => (
     <Fragment>
-      <Button title="LEARN MORE" {...btnStyle} />
+      <Button
+        title="Book a 30-Minute Consultation"
+        as="a"
+        href="mailto:hello@usmakestwo.io?subject=Consultation Request"
+        {...btnStyle}
+      />
+      <Button
+        title="Email Me Directly"
+        as="a"
+        href="mailto:hello@usmakestwo.io"
+        variant="outlined"
+        {...outlineBtnStyle}
+      />
     </Fragment>
   );
+
   return (
     <BannerWrapper>
       <Particles />
       <Container>
         <Box className="row" {...row}>
           <Box className="col" {...col}>
-            <DiscountLabel>
-              <Text content="Download our" {...discountAmount} />
-              <Text content="white paper on building scalable data solutions" {...discountText} />
-            </DiscountLabel>
-            <FeatureBlock
-              title={
-                <Heading
-                  content="Knowledge is Power."
-                  {...title}
-                />
-              }
-              description={
-                <Text
-                  content="Dedicated to solving wicked problems in a scalable and enterprise first approach."
-                  {...description}
-                />
-              }
+            <Heading
+              content="Boutique AI Automation for the OpenClaw Era"
+              {...title}
             />
+            <Text
+              content="I help founders and operators design and implement end-to-end OpenClaw strategies that turn autonomous AI agents into real business results – not just demos."
+              {...description}
+            />
+            <Box className="button__wrapper">
+              <ButtonGroup />
+            </Box>
           </Box>
         </Box>
       </Container>
@@ -59,9 +62,6 @@ BannerSection.propTypes = {
   title: PropTypes.object,
   btnStyle: PropTypes.object,
   description: PropTypes.object,
-  contentStyle: PropTypes.object,
-  discountText: PropTypes.object,
-  discountAmount: PropTypes.object,
   outlineBtnStyle: PropTypes.object,
 };
 
@@ -76,46 +76,36 @@ BannerSection.defaultProps = {
   col: {
     pr: '15px',
     pl: '15px',
-    width: ['100%', '70%', '60%', '50%'],
+    width: ['100%', '80%', '70%', '60%'],
   },
   title: {
-    fontSize: ['26px', '34px', '42px', '55px'],
+    fontSize: ['28px', '36px', '46px', '58px'],
     fontWeight: '300',
     color: '#0f2137',
     letterSpacing: '-0.025em',
     mb: ['20px', '25px'],
-    lineHeight: '1.31',
+    lineHeight: '1.25',
   },
   description: {
-    fontSize: '16px',
+    fontSize: ['16px', '18px'],
     color: '#343d48cc',
-    lineHeight: '2.1',
+    lineHeight: '1.85',
     mb: '0',
+    maxWidth: '600px',
   },
   btnStyle: {
-    minWidth: ['120px', '156px'],
-    fontSize: '14px',
+    minWidth: ['200px', '220px'],
+    fontSize: '15px',
     fontWeight: '500',
+    mr: '15px',
+    mb: ['15px', '0'],
   },
   outlineBtnStyle: {
-    minWidth: ['130px', '156px'],
-    fontSize: '14px',
+    minWidth: ['160px', '180px'],
+    fontSize: '15px',
     fontWeight: '500',
     color: '#0f2137',
-    p: '5px 10px',
-  },
-  discountAmount: {
-    fontSize: '14px',
-    color: '#10AC84',
-    mb: 0,
-    as: 'span',
-    mr: '0.4em',
-  },
-  discountText: {
-    fontSize: '14px',
-    color: '#0f2137',
-    mb: 0,
-    as: 'span',
+    border: '2px solid #0f2137',
   },
 };
 
