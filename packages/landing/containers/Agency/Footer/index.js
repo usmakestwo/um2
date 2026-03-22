@@ -25,7 +25,7 @@ const Footer = ({
               title="Agency"
               logoStyle={logoStyle}
             />
-            <Text content="hello@usmakestwo.io" {...textStyle} />
+            <Text content="hello@usmakestwo.com" {...textStyle} />
             <Text content="+1416-910-2047" {...textStyle} />
           </Box>
           {/* End of footer logo column */}

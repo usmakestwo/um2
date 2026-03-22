@@ -27,7 +27,7 @@ const BannerSection = ({
       <Button
         title="Email Me Directly"
         as="a"
-        href="mailto:hello@usmakestwo.io"
+        href="mailto:hello@usmakestwo.com"
         variant="outlined"
         {...outlineBtnStyle}
       />

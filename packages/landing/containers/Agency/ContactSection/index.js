@@ -31,7 +31,7 @@ const ContactSection = ({
         </Box>
 
         <ContactForm
-          action="mailto:hello@usmakestwo.io"
+          action="mailto:hello@usmakestwo.com"
           method="post"
           encType="text/plain"
         >
@@ -85,7 +85,7 @@ const ContactSection = ({
             content={
               <span>
                 Prefer email?{' '}
-                <a href="mailto:hello@usmakestwo.io">hello@usmakestwo.io</a>
+                <a href="mailto:hello@usmakestwo.com">hello@usmakestwo.com</a>
                 {' · '}
                 <a href="tel:+14169102047">+1 416-910-2047</a>
               </span>
