@@ -6,7 +6,7 @@ import Logo from 'reusecore/src/elements/UI/Logo';
 import Container from 'common/src/components/UI/Container';
 import FooterWrapper from './footer.style';
 
-import LogoImage from 'common/src/assets/image/agency/um2long.png';
+import LogoImage from 'common/src/assets/image/agency/logo-horizontal.svg';
 
 const Footer = ({ row, colOne, colTwo, logoStyle }) => {
   return (
@@ -80,7 +80,9 @@ Footer.defaultProps = {
     textAlign: ['left', 'left', 'right'],
   },
   logoStyle: {
-    width: '160px',
+    width: '200px',
+    height: '38px',
+    objectFit: 'contain',
     mb: '0',
   },
 };

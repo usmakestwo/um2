@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 100" fill="none">
+  <defs>
+    <style>
+      .tr { stroke: #10ac84; stroke-width: 2.8; stroke-linecap: round; stroke-linejoin: round; fill: none; }
+      .nd { fill: #c4993a; }
+    </style>
+  </defs>
+
+  <!-- ── MINI CIRCUIT TREE (left side icon) ── -->
+  <!-- Trunk base -->
+  <rect x="34" y="76" width="16" height="14" rx="2" class="tr"/>
+  <!-- Trunk -->
+  <line x1="42" y1="76" x2="42" y2="56" class="tr"/>
+  <!-- Primary split -->
+  <polyline points="42,56 26,56 26,40" class="tr"/>
+  <polyline points="42,56 58,56 58,40" class="tr"/>
+  <line x1="42" y1="56" x2="42" y2="36" class="tr"/>
+  <!-- Left branch -->
+  <polyline points="26,40 14,40 14,24" class="tr"/>
+  <circle cx="14" cy="19" r="5" class="nd"/>
+  <line x1="26" y1="40" x2="26" y2="24" class="tr"/>
+  <circle cx="26" cy="19" r="5" class="nd"/>
+  <polyline points="26,40 36,28" class="tr"/>
+  <circle cx="38" cy="26" r="5" class="nd"/>
+  <!-- Right branch -->
+  <polyline points="58,40 70,40 70,24" class="tr"/>
+  <circle cx="70" cy="19" r="5" class="nd"/>
+  <line x1="58" y1="40" x2="58" y2="24" class="tr"/>
+  <circle cx="58" cy="19" r="5" class="nd"/>
+  <polyline points="58,40 48,28" class="tr"/>
+  <circle cx="46" cy="26" r="5" class="nd"/>
+  <!-- Centre branch -->
+  <polyline points="42,36 34,36 34,20" class="tr"/>
+  <circle cx="34" cy="15" r="5" class="nd"/>
+  <polyline points="42,36 50,36 50,20" class="tr"/>
+  <circle cx="50" cy="15" r="5" class="nd"/>
+  <line x1="42" y1="36" x2="42" y2="14" class="tr"/>
+  <circle cx="42" cy="9"  r="5" class="nd"/>
+
+  <!-- ── WORDMARK ── -->
+  <text
+    x="100"
+    y="70"
+    font-family="'Century Gothic', 'Futura', 'Trebuchet MS', sans-serif"
+    font-size="52"
+    font-weight="700"
+    fill="#f0f0f0"
+    letter-spacing="-0.5"
+  >UsMakesTwo</text>
+</svg>

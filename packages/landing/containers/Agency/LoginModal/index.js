@@ -12,7 +12,7 @@ import Button from 'reusecore/src/elements/Button';
 import Image from 'reusecore/src/elements/Image';
 import LoginModalWrapper from './loginModal.style';
 import 'rc-tabs/assets/index.css';
-import LogoImage from 'common/src/assets/image/agency/logo.png';
+import LogoImage from 'common/src/assets/image/agency/logo.svg';
 import LoginImage from 'common/src/assets/image/agency/login-bg.jpg';
 import GoogleLogo from 'common/src/assets/image/agency/google-icon.jpg';
 
